@@ -39,6 +39,9 @@
 > npm test
 ```
 
+- If no tests are run, follow the instructions given in your CLI.
+- You might need to press `Enter` to run the tests. If that doesn't yet show below view, press `a` to run all tests.
+
 ### Possible output of tests
 
 ![screenshot of test results](tests.png)
