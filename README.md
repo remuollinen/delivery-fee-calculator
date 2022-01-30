@@ -1,5 +1,7 @@
 # Delivery Fee Calculator
 
+![screenshot](screenshot.png)
+
 - This application calculates the delivery price based on what values the user inputs (cart value excluded).
 - The user can input cart value, delivery distance, number of items and time for delivery.
 
