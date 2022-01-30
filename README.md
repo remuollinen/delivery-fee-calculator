@@ -1,9 +1,9 @@
 # Delivery Fee Calculator
 
-![screenshot](screenshot.png)
-
 - This application calculates the delivery price based on what values the user inputs (cart value excluded).
 - The user can input cart value, delivery distance, number of items and time for delivery.
+
+- Built with React and TypeScript
 
 ## Usage
 
@@ -26,3 +26,19 @@
 ```shell
 > npm start
 ```
+
+### You should see this in your browser (with empty fields)
+
+![screenshot](screenshot.png)
+
+## Tests
+
+- To run tests, type the following command via CLI
+
+```shell
+> npm test
+```
+
+### Possible output of tests
+
+![screenshot of test results](tests.png)

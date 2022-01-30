@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
 const Form = ({ getCalcData }: { getCalcData: (data: number) => void }) => {
@@ -8,11 +9,11 @@ const Form = ({ getCalcData }: { getCalcData: (data: number) => void }) => {
 	let surcharge: number = 0;
 	let distanceFee: number = 0;
 
-	const returnCalcDataToParent = (data: number) => {
+	// passes data back to App component
+	function returnCalcDataToParent(data: number) {
 		getCalcData(data);
-	};
+	}
 
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => returnCalcDataToParent(deliveryPrice), [deliveryPrice]);
 
 	const calcDeliveryFee = (e: React.FormEvent) => {
@@ -48,6 +49,7 @@ const Form = ({ getCalcData }: { getCalcData: (data: number) => void }) => {
 		const baseFee: number = 2;
 		if (distance > 1000) {
 			const difference: number = distance - 1000;
+			// creates an array of cutpoints every 500 meters, i.e. 500, 1000, 1500 ... and so on
 			const differenceCutPoints: number[] = new Array(20)
 				.fill(500)
 				.map((val, i) => val + i * 500);
@@ -74,6 +76,7 @@ const Form = ({ getCalcData }: { getCalcData: (data: number) => void }) => {
 		const dateInput = (document.getElementById("date") as HTMLInputElement)
 			.value;
 		const date: Date = new Date(dateInput);
+		// check if day is Friday(=5)
 		if (date.getUTCDay() === 5) {
 			if (date.getUTCHours() >= 15 && date.getUTCHours() < 19) {
 				total = +((surcharge + distanceFee) * 1.1).toFixed(2);
@@ -95,28 +98,39 @@ const Form = ({ getCalcData }: { getCalcData: (data: number) => void }) => {
 						id="cart"
 						min="0"
 						step="0.01"
-						alt="input"
+						data-testid="cart"
 						required
 					/>
 				</label>
 				<label>
 					<span>Distance (m)</span>
-					<input type="number" id="distance" min="0" alt="input" required />
+					<input
+						type="number"
+						id="distance"
+						min="0"
+						data-testid="distance"
+						required
+					/>
 				</label>
 				<label>
 					<span>Amount of Items</span>
-					<input type="number" id="items" min="0" alt="input" required />
+					<input
+						type="number"
+						id="items"
+						min="0"
+						data-testid="items"
+						required
+					/>
 				</label>
 				<label>
 					<span>Time</span>
-					<input type="datetime-local" id="date" alt="input" required />
+					<input type="datetime-local" id="date" data-testid="date" required />
 				</label>
 				<input
 					data-testid="submit"
 					type="submit"
 					id="submit"
 					value="Calculate Delivery Price"
-					alt="input"
 				/>
 			</form>
 		</main>
