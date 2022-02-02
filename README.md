@@ -5,6 +5,8 @@
 
 - Built with React and TypeScript
 
+- Live version hosted on Netlify. See it [here](https://condescending-euler-68cf1f.netlify.app/).
+
 ## Usage
 
 1. Get the application folder to your local computer in your preferred way (i.e. forking or cloning this project). You could have also downloaded it if the project folder was shared with you.
