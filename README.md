@@ -48,6 +48,10 @@
 
 ![screenshot of test results](tests.png)
 
+## Possible next features
+
+- A feature, where the rules for calculating delivery fee are explained.
+
 ## Resources
 
 - This was a pre-assignment for a summer internship at Wolt.
