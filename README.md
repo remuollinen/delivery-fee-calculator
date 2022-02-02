@@ -47,3 +47,8 @@
 ### Possible output of tests
 
 ![screenshot of test results](tests.png)
+
+## Resources
+
+- This was a pre-assignment for a summer internship at Wolt.
+- Here is the link to the instruction of the pre-assignment: [https://github.com/woltapp/engineering-summer-intern-2022](https://github.com/woltapp/engineering-summer-intern-2022)
